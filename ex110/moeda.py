@@ -5,7 +5,7 @@ def metade(valor, form=True):
     else:
         return "R${:.2f} ".format(x).replace(".", ",")
 
-    
+
 def dobro(valor, form=True):
     x = (valor*2)
     if form == False:

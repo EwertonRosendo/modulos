@@ -4,6 +4,8 @@ def metade(valor, form=True):
         return x
     else:
         return "R${:.2f} ".format(x).replace(".", ",")
+
+
 def dobro(valor, form=True):
     x = (valor*2)
     if form == False:
@@ -30,8 +32,6 @@ def reduzindo(valor, form=True, porc=1):
 
 
 def resumo(valor, mais=10, menos=13):
-
-
     print("_"*32), print("        RESUMO DO VALOR"), print("_"*32)
     print("Preço analisado:  R${:.2f}".format(valor).replace(".", ","))
     print(f"Dobro do preço:   {dobro(valor)}")
