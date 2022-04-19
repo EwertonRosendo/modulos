@@ -1,4 +1,5 @@
-from utilidadesCeV import moeda
+from utilidadesCeV import moeda, dado
 
-p = float(input("Digite o preço: "))
-moeda.resumo(100, 13, 15)
+p = input("Digite o preço: ")
+dado.validador(p)
+moeda.resumo(p, 13, 15)

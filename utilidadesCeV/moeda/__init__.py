@@ -33,7 +33,10 @@ def reduzindo(valor, form=True, porc=1):
 
 def resumo(valor, mais=10, menos=13):
     print("_"*32), print("        RESUMO DO VALOR"), print("_"*32)
-    print("Preço analisado:  R${:.2f}".format(valor).replace(".", ","))
+    if "." in valor:
+        print("Preço analisado:  R${:.2f}".format(valor).replace(".", ","))
+    else:
+        print("Preço analisado:  R${:.2f}".format(valor))
     print(f"Dobro do preço:   {dobro(valor)}")
     print(f"Metade do Preço:  {metade(valor)}")
     print(f"{mais}% de aumento:   {aumentar(valor, porc=mais)}")
