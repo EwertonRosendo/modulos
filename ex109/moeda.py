@@ -1,29 +1,19 @@
-def metade(valor, form=False):
+def metade(valor, form=True):
     x = (valor/2)
-    if form == False:
-        return x
-    else:
-        return "R${:.2f} ".format(x).replace(".", ",")
-def dobro(valor, form=False):
+    return x if form is False else moeda(x)
+def dobro(valor, form=True):
     x = (valor*2)
-    if form == False:
-        return x
-    else:
-        return "R${:.2f} ".format(x).replace(".", ",")
+    return x if form is False else moeda(x)
 
 
-def aumentar(valor, form=False):
+def aumentar(valor, form=True):
     x = ((valor*(10/100)) + valor)
-    if form == False:
-        return x
-    else:
-        return "R${:.2f} ".format(x).replace(".", ",")
+    return x if form is False else moeda(x)
 
 
-def reduzindo(valor, form=False):
+def reduzindo(valor, form=True):
     x = (valor - (valor*(13/100)))
-    if form == False:
-        return x
-    else:
-        return "R${:.2f} ".format(x).replace(".", ",")
+    return x if form is False else moeda(x)
 
+def moeda(valor):
+    return "R$ {:.2f}".format(valor).replace(".", ",")

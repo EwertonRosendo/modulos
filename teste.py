@@ -1,7 +1,4 @@
-from ex107 import moeda
+from ex110 import moeda
 
-p = int(input("Digite um valor: "))
-print(moeda.dobro(p))
-print(moeda.metade(p))
-print(moeda.aumentar(p))
-print(moeda.reduzindo(p))
+p = float(input("Digite o preço: "))
+moeda.resumo(100, 13, 15)
