@@ -1,3 +1,7 @@
-from utilidadesCeV import moeda
-p = float(input("Digite um preço: R$"))
-moeda.resumo(p, 80, 70)
+from ex107 import moeda
+
+p = int(input("Digite um valor: "))
+print(moeda.dobro(p))
+print(moeda.metade(p))
+print(moeda.aumentar(p))
+print(moeda.reduzindo(p))
